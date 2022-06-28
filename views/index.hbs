@@ -1,0 +1,178 @@
+<header class="box">
+    <div class="container-fluid">
+        <div class="menu">
+            <img src="images/logo.jpg" width="100" height="" alt="">
+            <nav>
+                <ul>
+                    <li><a href="Home">Home</a></li>
+                    <li><a href="Clases">Clases</a></li>
+                    <li><a href="Trainers">Trainers</a></li>
+                    <li><a href="Contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+
+    </div>
+
+    <div class="destacado">
+        <h1>EMPIEZA TU ENTRENAMIENTO GRATIS CON NOSOTROS.</h1>
+        <a href="">ÚNETE A NUESTRO GIMNASIO</a>
+
+    </div>
+
+
+</header>
+
+<section id="tarjetas">
+    <div class="contenedor">
+        <div class="contenedor-tarjetas">
+
+            <div class="tarjeta">
+                <img src="images/icono1.jpg" width="" height="120" alt="">
+                <h3>Entrenamiento de Fuerza</h3>
+                <p>El entrenamiento de fuerza (o entrenamiento de resistencia) utiliza la resistencia para aumentar
+                    la capacidad de una persona para ejercer fuerza. Involucra el uso de máquinas de peso, peso
+                    libre, bandas elásticas o tubos, o el propio peso de la persona. Esto no es lo mismo que
+                    levantamiento olímpico, levantamiento de fuerza o fisicoculturismo, que requiere el uso de
+                    movimientos balísticos y levantamientos máximos y no está recomendado para niños.</p>
+
+                <a href="">Leé más</a>
+            </div>
+
+            <div id="segunda-tarjeta" class="tarjeta">
+                <img src="images/icono2.jpg" width="120" height="" alt="">
+                <h3>Entrenamiento Cardio</h3>
+                <p>El cardio o ejercicio cardiovascular es una de las actividades fitness más populares que consiste
+                    en trabajar grandes grupos musculares al mismo tiempo de forma rítmica y repetitiva.</p>
+                <a href="">Leé más</a>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="clases">
+    <h2>CLASES</h2>
+    <div class="contenedor">
+
+        <table>
+            <th>Días</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+            <tr class="gris">
+                <td class="Horario">09.00 - 10.00</td>
+                <td></td>
+                <td></td>
+
+                <td>
+                    <p class="negrita">Aerobico</p>
+                    <p>Emma Boente</p>
+                </td>
+
+                <td>
+                    <p class="negrita">Yoga</p>
+                    <p>Gian Domeni</p>
+                </td>
+
+                <td>
+                    <p class="negrita">Zumba</p>
+                    <p>Santi Juarez</p>
+                </td>
+            </tr>
+            <tr class="blanco">
+                <td class="Horario">10:00 - 12:00</td>
+
+                <td>
+                    <p class="negrita">Zumba</p>
+                    <p>Santi Juarez</p>
+                </td>
+
+                <td>
+                    <p class="negrita">Aerobico</p>
+                    <p>Emma Boente</p>
+                </td>
+
+                <td></td>
+                <td></td>
+                <td>
+                    <p class="negrita">Yoga</p>
+                    <p>Gian Domeni</p>
+                </td>
+            </tr>
+
+            <tr class="gris">
+                <td class="Horario">10.00 - 12.00</td>
+                <td>
+                    <p class="negrita">Zumba</p>
+                    <p>Santi Juarez</p>
+                </td>
+
+                <td>
+                    <p class="negrita">Aerobico</p>
+                    <p>Emma Boente</p>
+                </td>
+                <td></td>
+                <td>
+                    <p class="negrita">Yoga</p>
+                    <p>Gian Domeni</p>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+
+
+
+
+    </div>
+    <div class="container-flex">
+        <div class="item-1">
+            <h4>Novedades</h4>
+            {{#each novedades}}
+            <ul>
+
+                <li><a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{id}}"><img src="images/entrenamiento.jpg"
+                            width="300px">{{titulo}}</a></li>
+
+            </ul>
+            {{/each}}
+
+
+
+        </div>
+
+    </div>
+    <form class="contacto" action="/" method="post">
+        <h5>Contacto</h5>
+        <label for="nombre">Nombre</label>
+        <input class="form-control" type="text" name="nombre" id="nombre" placeholder="nombre">
+
+        <label for="email">Email</label>
+        <input class="form-control" type="text" name="email" id="email" placeholder="ejemplo@hotmail.com">
+
+        <label for="telefono">Telefono</label>
+        <input class="form-control" type="text" id="telefono" name="telefono" placeholder="telefono">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea class="form-control" name="mensaje" id="mensaje" cols="30" rows="10"
+            placeholder="escriba aqui su mensaje"></textarea>
+
+        <input class="btn btn-primary" type="submit" id="boton">
+
+    </form>
+    {{#if message}}
+    {{message}}
+    {{/if}}
+
+
+</section>
+
+<footer>Diseñado por iván @Gña</footer>
